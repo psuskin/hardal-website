@@ -68,7 +68,7 @@ const menuToNavSections = (menuData: MenuSection[]): NavigationSection[] => {
 const aboutUsSections: NavigationSection[] = [
     {
         title: "FEIERN",
-        description: "Host your celebrations with us",
+        description: "Feiern Sie Ihre besonderen Anlässe bei uns",
         image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070",
         items: [
             { href: "/uber-uns/feiern", label: "FEIERN" }
@@ -76,7 +76,7 @@ const aboutUsSections: NavigationSection[] = [
     },
     {
         title: "WERBUNG FÜR FIRMEN",
-        description: "Corporate advertising solutions",
+        description: "Werbemöglichkeiten für Unternehmen",
         image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070",
         items: [
             { href: "/uber-uns/werbung-fur-firmen", label: "WERBUNG FÜR FIRMEN" }
@@ -84,7 +84,7 @@ const aboutUsSections: NavigationSection[] = [
     },
     {
         title: "GUTSCHEINE",
-        description: "Gift certificates for any occasion",
+        description: "Geschenkgutscheine für jeden Anlass",
         image: "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?q=80&w=2070",
         items: [
             { href: "/uber-uns/gutscheine", label: "GUTSCHEINE" }
@@ -92,7 +92,7 @@ const aboutUsSections: NavigationSection[] = [
     },
     {
         title: "GALERIE",
-        description: "Photos from our restaurant",
+        description: "Fotos aus unserem Restaurant",
         image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070",
         items: [
             { href: "/uber-uns/galerie", label: "GALERIE" }
@@ -100,7 +100,7 @@ const aboutUsSections: NavigationSection[] = [
     },
     {
         title: "SEHENSWÜRDIGKEITEN",
-        description: "Local attractions and sights",
+        description: "Lokale Attraktionen und Sehenswürdigkeiten",
         image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=2070",
         items: [
             { href: "/uber-uns/sehenswurdigkeiten", label: "SEHENSWÜRDIGKEITEN" }

@@ -187,7 +187,7 @@ const Navbar = () => {
                                         className="text-[#fcc81a]"
                                       />
                                       <span className="text-xs font-medium">
-                                        PDF Menu
+                                        PDF Speisekarte
                                       </span>
                                     </a>
                                   </div>
@@ -197,7 +197,7 @@ const Navbar = () => {
                                       Hardal Restaurant
                                     </h3>
                                     <p className="text-white/90 text-sm font-light mb-4 max-w-xs">
-                                      Experience authentic Turkish cuisine
+                                      Erleben Sie authentische türkische Küche
                                     </p>
                                     <div className="flex flex-col space-y-2 z-20 relative">
                                       <Link

@@ -13,7 +13,7 @@ interface AttractionProps {
   }>;
   additionalAttractions: Array<{
     name: string;
-    icon: string;
+    category: string;
   }>;
 }
 
@@ -89,7 +89,9 @@ const Attractions: React.FC<AttractionProps> = ({
             key={index}
             className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors text-center"
           >
-            <span className="text-2xl mb-2 block">{item.icon}</span>
+            <span className="text-sm text-[#fcc81a]/80 mb-2 block">
+              {item.category}
+            </span>
             <p className="text-white font-medium">{item.name}</p>
           </div>
         ))}

@@ -54,7 +54,7 @@ export const fullMenuData: MenuSection[] = [
     {
         title: "Çiğ Köfte",
         titleTR: "Çiğ Köfte",
-        description: "Mit Eisbergsalat, Pomegranate Sauce und Lavas-Brot",
+        description: "Mit Eisbergsalat, Granatapfelsauce und Lavas-Brot",
         image: "https://images.unsplash.com/photo-1606850246029-dd00bd5a0f25?q=80&w=2070",
         items: [
             {
@@ -66,21 +66,21 @@ export const fullMenuData: MenuSection[] = [
             },
             {
                 id: 482,
-                name: "Çiğ Köfte (2 Persons)",
+                name: "Çiğ Köfte (2 Personen)",
                 description: "Çiğ köfte Portion (600g)",
                 price: "€26.00",
                 image: "https://images.unsplash.com/photo-1606850246029-dd00bd5a0f25?q=80&w=2070"
             },
             {
                 id: 483,
-                name: "Çiğ Köfte (3 Persons)",
+                name: "Çiğ Köfte (3 Personen)",
                 description: "Çiğ köfte Portion (900g)",
                 price: "€39.00",
                 image: "https://images.unsplash.com/photo-1606850246029-dd00bd5a0f25?q=80&w=2070"
             },
             {
                 id: 484,
-                name: "Çiğ Köfte (4 Persons)",
+                name: "Çiğ Köfte (4 Personen)",
                 description: "Çiğ köfte Portion (1200g)",
                 price: "€52.00",
                 image: "https://images.unsplash.com/photo-1606850246029-dd00bd5a0f25?q=80&w=2070"
@@ -95,7 +95,7 @@ export const fullMenuData: MenuSection[] = [
         ]
     },
     {
-        title: "Soups",
+        title: "Suppen",
         titleTR: "Çorbalar",
         description: "Traditionelle türkische Suppen",
         image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=2070",
@@ -138,9 +138,9 @@ export const fullMenuData: MenuSection[] = [
         ]
     },
     {
-        title: "Cold Appetizers",
+        title: "Kalte Vorspeisen",
         titleTR: "Soğuk Mezeler",
-        description: "Traditionelle türkische kaltes Vorspeisen",
+        description: "Traditionelle türkische kalte Vorspeisen",
         image: "https://images.unsplash.com/photo-1606850246029-dd00bd5a0f25?q=80&w=2070",
         items: [
             {
@@ -152,51 +152,51 @@ export const fullMenuData: MenuSection[] = [
             {
                 id: 11,
                 name: "Süzme Yoğurt",
-                description: "Strained yogurt",
+                description: "Streichjoghurt",
                 price: "€4.90"
             },
             {
                 id: 12,
                 name: "Havuç Tarator",
-                description: "Grated carrots with yogurt, garlic, and olive oil",
+                description: "Geriebene Karotten mit Joghurt, Knoblauch und Olivenöl",
                 price: "€6.90"
             },
             {
                 id: 13,
                 name: "Çiğ Köfte",
-                description: "Çiğ köfte with iceberg lettuce and pomegranate sauce (6 Pieces)",
+                description: "Çiğ Köfte mit Eisbergsalat und Granatapfelsauce (6 Stück)",
                 price: "€6.90"
             },
             {
                 id: 14,
                 name: "Antep Ezmesi",
-                description: "Spicy Turkish vegetable paste",
+                description: "Würzige türkische Gemüsepaste",
                 price: "€6.50"
             },
             {
                 id: 15,
                 name: "Közlenmiş Patlıcan Salatası",
-                description: "Grilled aubergine salad with peppers and creamy yogurt",
+                description: "Gegrillter Auberginensalat mit Paprika und cremigem Joghurt",
                 price: "€6.90"
             },
             {
                 id: 16,
                 name: "Zeytinyağlı Yaprak Sarması",
-                description: "Stuffed vine leaves with olive oil and creamy yogurt (6 Pieces)",
+                description: "Gefüllte Weinblätter mit Olivenöl und cremigem Joghurt (6 Stück)",
                 price: "€7.90"
             }
         ]
     },
     {
-        title: "Hot Appetizers",
+        title: "Warme Vorspeisen",
         titleTR: "Sıcak Mezeler",
-        description: "Traditionelle türkische heiße Vorspeisen",
+        description: "Traditionelle türkische warme Vorspeisen",
         image: "https://images.unsplash.com/photo-1530189755474-b84b91cf3c15?q=80&w=1974",
         items: [
             {
                 id: 20,
                 name: "Peynirli Sigara Böreği",
-                description: "4 cheese-filled pastry rolls with creamy yogurt and side salad",
+                description: "4 Käse-gefüllte Teigrollen mit cremigem Joghurt und Beilagensalat",
                 price: "€8.90"
             },
             {

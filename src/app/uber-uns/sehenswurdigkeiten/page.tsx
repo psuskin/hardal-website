@@ -76,11 +76,11 @@ export default function SehenswurdigkeitenPage() {
   ];
 
   const additionalAttractions = [
-    { name: "Fischmarkt", icon: "🐟" },
-    { name: "Jungfernstieg", icon: "🛍️" },
-    { name: "Alster", icon: "⛵" },
-    { name: "Messehallen", icon: "🏛️" },
-    { name: "Hamburg Airport", icon: "✈️" },
+    { name: "Fischmarkt", category: "Markt" },
+    { name: "Jungfernstieg", category: "Shopping" },
+    { name: "Alster", category: "See" },
+    { name: "Messehallen", category: "Veranstaltung" },
+    { name: "Hamburg Airport", category: "Transport" },
   ];
 
   const events = [
@@ -89,41 +89,41 @@ export default function SehenswurdigkeitenPage() {
       description:
         "Weltklasse-Musicals wie 'König der Löwen' und 'Wicked' in spektakulären Theatern.",
       link: "https://www.stage-entertainment.de/hamburg",
-      icon: "🎭",
+      category: "Theater",
     },
     {
       name: "HSV Arena",
       description:
         "Heimspielstätte des HSV - Erleben Sie die Atmosphäre des Volksparkstadions.",
       link: "https://www.hsv.de/tickets",
-      icon: "⚽",
+      category: "Sport",
     },
     {
       name: "Millerntor FC St. Pauli",
       description:
         "Das legendäre Stadion des FC St. Pauli mit einzigartiger Fan-Kultur.",
       link: "https://www.fcstpauli.com/tickets",
-      icon: "⚽",
+      category: "Sport",
     },
     {
       name: "Hamburger Dom",
       description:
         "Norddeutschlands größtes Volksfest mit aufregenden Attraktionen und Leckereien.",
       link: "https://hamburger-dom.de",
-      icon: "🎡",
+      category: "Festival",
     },
     {
       name: "Messe Hamburg",
       description: "Internationale Messen und Kongresse in modernem Ambiente.",
       link: "https://www.hamburg-messe.de/veranstaltungen",
-      icon: "🏢",
+      category: "Business",
     },
     {
       name: "Hamburger Theater",
       description:
         "Von klassisch bis modern - Hamburgs vielfältige Theaterszene.",
       link: "https://www.hamburg.de/theater",
-      icon: "🎭",
+      category: "Kultur",
     },
   ];
 
@@ -131,24 +131,52 @@ export default function SehenswurdigkeitenPage() {
     {
       name: "Hamburg Tourismus",
       url: "https://www.hamburg-tourism.de",
-      icon: "🏰",
+      category: "Tourismus",
     },
-    { name: "MOPO Termine", url: "https://www.mopo.de/termine", icon: "📅" },
-    { name: "HSV-Spielplan", url: "https://www.hsv.de/spielplan", icon: "⚽" },
+    {
+      name: "MOPO Termine",
+      url: "https://www.mopo.de/termine",
+      category: "Kalender",
+    },
+    {
+      name: "HSV-Spielplan",
+      url: "https://www.hsv.de/spielplan",
+      category: "Sport",
+    },
     {
       name: "St. Pauli Spielplan",
       url: "https://www.fcstpauli.com/spielplan",
-      icon: "⚽",
+      category: "Sport",
     },
-    { name: "Piste Hamburg", url: "https://www.piste-hamburg.de", icon: "🎉" },
-    { name: "Prinz", url: "https://www.prinz.de/hamburg", icon: "🎭" },
-    { name: "Szene Hamburg", url: "https://www.szene-hamburg.de", icon: "🎪" },
-    { name: "Clubkombinat", url: "https://www.klubkombinat.de", icon: "🎵" },
-    { name: "Klubsen.de", url: "https://www.klubsen.de", icon: "🎧" },
     {
-      name: "Konzerte",
+      name: "Piste Hamburg",
+      url: "https://www.piste-hamburg.de",
+      category: "Nightlife",
+    },
+    {
+      name: "Prinz",
+      url: "https://www.prinz.de/hamburg",
+      category: "Lifestyle",
+    },
+    {
+      name: "Szene Hamburg",
+      url: "https://www.szene-hamburg.de",
+      category: "Kultur",
+    },
+    {
+      name: "Clubkombinat",
+      url: "https://www.klubkombinat.de",
+      category: "Musik",
+    },
+    {
+      name: "Klubsen.de",
+      url: "https://www.klubsen.de",
+      category: "Nightlife",
+    },
+    {
+      name: "Konzerte Hamburg",
       url: "https://www.eventim.de/city/hamburg",
-      icon: "🎸",
+      category: "Musik",
     },
   ];
 

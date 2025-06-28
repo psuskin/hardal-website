@@ -6,12 +6,12 @@ interface EventsProps {
     name: string;
     description: string;
     link: string;
-    icon: string;
+    category: string;
   }>;
   eventLinks: Array<{
     name: string;
     url: string;
-    icon: string;
+    category: string;
   }>;
 }
 
@@ -29,7 +29,9 @@ const Events: React.FC<EventsProps> = ({ events, eventLinks }) => {
             className="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-all duration-300"
           >
             <div className="flex items-center mb-4">
-              <span className="text-3xl mr-4">{event.icon}</span>
+              <span className="text-sm text-[#fcc81a] bg-[#fcc81a]/10 px-3 py-1 rounded-full mr-4">
+                {event.category}
+              </span>
               <h4 className="text-xl font-semibold text-[#fcc81a]">
                 {event.name}
               </h4>
@@ -72,7 +74,9 @@ const Events: React.FC<EventsProps> = ({ events, eventLinks }) => {
             rel="noopener noreferrer"
             className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 flex flex-col items-center justify-center text-center group"
           >
-            <span className="text-2xl mb-2">{link.icon}</span>
+            <span className="text-sm text-[#fcc81a]/80 mb-2">
+              {link.category}
+            </span>
             <span className="text-white text-sm font-medium group-hover:text-[#fcc81a] transition-colors">
               {link.name}
             </span>
