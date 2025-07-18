@@ -21,8 +21,7 @@ const services = [
     description:
       "Traditionelles türkisches Frühstück mit einer Vielfalt an frischen Zutaten und Köstlichkeiten",
     link: "/fruhstuck",
-    image:
-      "https://images.unsplash.com/photo-1533920379810-6bedac961555?q=80&w=2070",
+    image: "/images/DSC00766.jpg",
     number: "01",
   },
   {
@@ -31,8 +30,7 @@ const services = [
     description:
       "Wochenend-Brunch-Erlebnis mit einer Mischung aus türkischen und internationalen Aromen",
     link: "/brunch",
-    image:
-      "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=2070",
+    image: "/images/DSC00791.jpg",
     number: "02",
   },
   {
@@ -40,9 +38,8 @@ const services = [
     title: "CATERING",
     description:
       "Professioneller Catering-Service für Veranstaltungen und besondere Anlässe",
-    link: "/catering",
-    image:
-      "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070",
+    link: "https://catering.hardal.de/",
+    image: "/images/DSC00773.jpg",
     number: "03",
   },
   {
@@ -50,8 +47,7 @@ const services = [
     title: "RESERVIERUNG",
     description: "Buchen Sie Ihren Tisch online für ein perfektes Esserlebnis",
     link: "/reservierung",
-    image:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070",
+    image: "/images/DSC00771.jpg",
     number: "04",
   },
 ];

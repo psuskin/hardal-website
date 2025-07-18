@@ -18,9 +18,8 @@ export default function SehenswurdigkeitenPage() {
       description:
         "Das pulsierende Herz Hamburgs mit einzigartiger Atmosphäre, trendigen Cafés und authentischen Restaurants.",
       distance: "0.5 km",
-      image:
-        "https://images.unsplash.com/photo-1577193120905-21e0c384a592?q=80&w=2070",
-      mapLink: "https://maps.google.com/?q=Schanzenviertel+Hamburg",
+      mapLink:
+        "https://www.hamburg.de/leben-in-hamburg/bezirke-hamburg/stadtteile-bezirk-altona/sternschanze-371180",
       category: "Viertel & Leben",
     },
     {
@@ -28,9 +27,7 @@ export default function SehenswurdigkeitenPage() {
       description:
         "Die weltberühmte Vergnügungsmeile im Herzen von St. Pauli - Hamburgs Entertainment-Zentrum.",
       distance: "1.2 km",
-      image:
-        "https://images.unsplash.com/photo-1560704429-509cb85baeb2?q=80&w=2070",
-      mapLink: "https://maps.google.com/?q=Reeperbahn+Hamburg",
+      mapLink: "https://reeperbahn.de/",
       category: "Unterhaltung",
     },
     {
@@ -38,9 +35,15 @@ export default function SehenswurdigkeitenPage() {
       description:
         "Legendäre Straße mit historischen Musik-Clubs und pulsierendem Nachtleben.",
       distance: "1.3 km",
-      image:
-        "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=2070",
-      mapLink: "https://maps.google.com/?q=Grosse+Freiheit+Hamburg",
+      mapLink: "http://grossefreiheit36.de/",
+      category: "Unterhaltung",
+    },
+    {
+      name: "Messehallen",
+      description:
+        "Legendäre Straße mit historischen Musik-Clubs und pulsierendem Nachtleben.",
+      distance: "1.3 km",
+      mapLink: "https://www.hamburg-messe.de/",
       category: "Unterhaltung",
     },
     {
@@ -48,9 +51,7 @@ export default function SehenswurdigkeitenPage() {
       description:
         "Das maritime Herz der Stadt - einer der bedeutendsten Häfen Europas mit atemberaubender Atmosphäre.",
       distance: "2.5 km",
-      image:
-        "https://images.unsplash.com/photo-1564260670111-18b14e5e0b3e?q=80&w=2070",
-      mapLink: "https://maps.google.com/?q=Hamburger+Hafen",
+      mapLink: "https://www.hafen-hamburg.de/",
       category: "Wahrzeichen",
     },
     {
@@ -58,9 +59,8 @@ export default function SehenswurdigkeitenPage() {
       description:
         "Historische Hafenpromenade mit eindrucksvollem Blick auf Schiffe und Hafenkulisse.",
       distance: "2.7 km",
-      image:
-        "https://images.unsplash.com/photo-1561116275-7f3ad5e4d74a?q=80&w=2070",
-      mapLink: "https://maps.google.com/?q=Landungsbrücken+Hamburg",
+      mapLink:
+        "https://www.hamburg-tourism.de/sehen-erleben/hamburg-maritim/an-den-landungsbruecken/",
       category: "Wahrzeichen",
     },
     {
@@ -68,19 +68,33 @@ export default function SehenswurdigkeitenPage() {
       description:
         "Die größte Modelleisenbahn der Welt - eine faszinierende Miniaturwelt für Jung und Alt.",
       distance: "3.0 km",
-      image:
-        "https://images.unsplash.com/photo-1568822617270-2c1579f8dfe2?q=80&w=2070",
-      mapLink: "https://maps.google.com/?q=Miniatur+Wunderland+Hamburg",
+      mapLink: "https://www.miniatur-wunderland.de/",
       category: "Attraktion",
     },
   ];
 
   const additionalAttractions = [
-    { name: "Fischmarkt", category: "Markt" },
-    { name: "Jungfernstieg", category: "Shopping" },
-    { name: "Alster", category: "See" },
-    { name: "Messehallen", category: "Veranstaltung" },
-    { name: "Hamburg Airport", category: "Transport" },
+    {
+      name: "Fischmarkt",
+      category: "Markt",
+      link: "https://www.hamburg-tourism.de/sehen-erleben/hamburg-maritim/rund-um-den-fischmarkt/",
+    },
+    {
+      name: "Jungfernstieg",
+      category: "Shopping",
+      link: "https://www.hamburg-jungfernstieg.de/",
+    },
+    { name: "Alster", category: "See", link: "http://www.alstertouristik.de/" },
+    {
+      name: "Messehallen",
+      category: "Veranstaltung",
+      link: "https://www.hamburg-messe.de/",
+    },
+    {
+      name: "Hamburg Airport",
+      category: "Transport",
+      link: "https://www.hamburg-airport.de/",
+    },
   ];
 
   const events = [
@@ -95,7 +109,7 @@ export default function SehenswurdigkeitenPage() {
       name: "HSV Arena",
       description:
         "Heimspielstätte des HSV - Erleben Sie die Atmosphäre des Volksparkstadions.",
-      link: "https://www.hsv.de/tickets",
+      link: "https://hotelsarena.de/imtech/",
       category: "Sport",
     },
     {
@@ -109,7 +123,7 @@ export default function SehenswurdigkeitenPage() {
       name: "Hamburger Dom",
       description:
         "Norddeutschlands größtes Volksfest mit aufregenden Attraktionen und Leckereien.",
-      link: "https://hamburger-dom.de",
+      link: "https://www.hamburg-tourism.de/sehen-erleben/veranstaltungen/",
       category: "Festival",
     },
     {
@@ -122,7 +136,7 @@ export default function SehenswurdigkeitenPage() {
       name: "Hamburger Theater",
       description:
         "Von klassisch bis modern - Hamburgs vielfältige Theaterszene.",
-      link: "https://www.hamburg.de/theater",
+      link: "https://www.hamburgtheater.de/",
       category: "Kultur",
     },
   ];
@@ -130,7 +144,7 @@ export default function SehenswurdigkeitenPage() {
   const eventLinks = [
     {
       name: "Hamburg Tourismus",
-      url: "https://www.hamburg-tourism.de",
+      url: "https://www.hamburg-tourism.de/sehen-erleben/veranstaltungen/",
       category: "Tourismus",
     },
     {
@@ -145,12 +159,12 @@ export default function SehenswurdigkeitenPage() {
     },
     {
       name: "St. Pauli Spielplan",
-      url: "https://www.fcstpauli.com/spielplan",
+      url: "https://www.fcstpauli.com/profis/spielplan",
       category: "Sport",
     },
     {
       name: "Piste Hamburg",
-      url: "https://www.piste-hamburg.de",
+      url: "https://www.piste.de/hamburg/",
       category: "Nightlife",
     },
     {
@@ -170,12 +184,12 @@ export default function SehenswurdigkeitenPage() {
     },
     {
       name: "Klubsen.de",
-      url: "https://www.klubsen.de",
+      url: "http://www.klubsen.de/",
       category: "Nightlife",
     },
     {
       name: "Konzerte Hamburg",
-      url: "https://www.eventim.de/city/hamburg",
+      url: "http://www.originalton-hamburg.de/",
       category: "Musik",
     },
   ];
@@ -186,7 +200,7 @@ export default function SehenswurdigkeitenPage() {
         imageAlt="Sehenswürdigkeiten Hamburg"
         title="SEHENSWÜRDIGKEITEN"
         subtitle="Entdecken Sie Hamburg"
-        imageSrc="https://images.unsplash.com/photo-1473615695634-d284ec918736?q=80&w=2070"
+        imageSrc="/images/sehenswurdigkeiten.jpg"
       />
 
       <section className="py-20 md:py-32">

@@ -22,20 +22,20 @@ const Events: React.FC<EventsProps> = ({ events, eventLinks }) => {
         Veranstaltungen & Entertainment
       </h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {events.map((event, index) => (
           <div
             key={index}
-            className="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-all duration-300"
+            className="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-all duration-300 group"
           >
-            <div className="flex items-center mb-4">
-              <span className="text-sm text-[#fcc81a] bg-[#fcc81a]/10 px-3 py-1 rounded-full mr-4">
-                {event.category}
-              </span>
-              <h4 className="text-xl font-semibold text-[#fcc81a]">
+            <div className="flex items-start justify-between mb-4">
+              <h4 className="text-xl font-semibold text-[#fcc81a] group-hover:text-white transition-colors">
                 {event.name}
               </h4>
             </div>
+            <span className="inline-block bg-[#fcc81a]/10 text-[#fcc81a] text-sm py-1 px-3 rounded-full mb-3">
+              {event.category}
+            </span>
             <p className="text-white/70 mb-4">{event.description}</p>
             <a
               href={event.link}
@@ -65,16 +65,16 @@ const Events: React.FC<EventsProps> = ({ events, eventLinks }) => {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {eventLinks.map((link, index) => (
           <a
             key={index}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 flex flex-col items-center justify-center text-center group"
+            className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 text-center group"
           >
-            <span className="text-sm text-[#fcc81a]/80 mb-2">
+            <span className="text-sm text-[#fcc81a]/80 mb-2 block">
               {link.category}
             </span>
             <span className="text-white text-sm font-medium group-hover:text-[#fcc81a] transition-colors">

@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MinimalButton from "../Buttons/MinimalButton";
@@ -19,8 +18,6 @@ const menuItems = [
     price: "13,50€",
     tags: ["3,4,H,A,D,C"],
     category: "dishes",
-    image:
-      "https://images.unsplash.com/photo-1600335895229-6e75511892c8?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: 371,
@@ -30,8 +27,6 @@ const menuItems = [
     price: "14,50€",
     tags: ["3,5,1,1,4,A,H,D,C"],
     category: "dishes",
-    image:
-      "https://images.unsplash.com/photo-1529563021893-cc83c992d75d?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: 372,
@@ -41,8 +36,6 @@ const menuItems = [
     price: "14,90€",
     tags: ["3,5,1,1,4,A,H,D,C"],
     category: "dishes",
-    image:
-      "https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=2080&auto=format&fit=crop",
   },
   {
     id: 373,
@@ -52,8 +45,6 @@ const menuItems = [
     price: "13,00€",
     tags: ["3,4,H,A,D,C"],
     category: "dishes",
-    image:
-      "https://images.unsplash.com/photo-1484344597163-9347ad5c4b42?q=80&w=2080&auto=format&fit=crop",
   },
   {
     id: 374,
@@ -63,8 +54,6 @@ const menuItems = [
     price: "13,00€",
     tags: ["3,4,H,A,D,C"],
     category: "dishes",
-    image:
-      "https://images.unsplash.com/photo-1510693206972-df098062cb71?q=80&w=2098&auto=format&fit=crop",
   },
   {
     id: 375,
@@ -74,8 +63,6 @@ const menuItems = [
     price: "13,00€",
     tags: ["3,4,H,A,D,C"],
     category: "dishes",
-    image:
-      "https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: 180,
@@ -85,8 +72,6 @@ const menuItems = [
     price: "17,90€",
     tags: [],
     category: "buffet",
-    image:
-      "https://images.unsplash.com/photo-1513442542250-854d436a73f2?q=80&w=2069&auto=format&fit=crop",
   },
   {
     id: 181,
@@ -96,8 +81,6 @@ const menuItems = [
     price: "12,90€",
     tags: ["(4-10 JAHRE)"],
     category: "buffet",
-    image:
-      "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=1980&auto=format&fit=crop",
   },
   {
     id: 182,
@@ -106,8 +89,6 @@ const menuItems = [
     price: "20,90€",
     tags: [],
     category: "buffet",
-    image:
-      "https://images.unsplash.com/photo-1533920379810-6bedac961555?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: 183,
@@ -116,8 +97,6 @@ const menuItems = [
     price: "14,90€",
     tags: ["(4-10 JAHRE)"],
     category: "buffet",
-    image:
-      "https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?q=80&w=1887&auto=format&fit=crop",
   },
   {
     id: 184,
@@ -127,8 +106,6 @@ const menuItems = [
     price: "23,90€",
     tags: [],
     category: "buffet",
-    image:
-      "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: 185,
@@ -138,8 +115,6 @@ const menuItems = [
     price: "17,90€",
     tags: ["(4-10 JAHRE)"],
     category: "buffet",
-    image:
-      "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070&auto=format&fit=crop",
   },
 ];
 
@@ -183,101 +158,18 @@ const Fruhstuck = () => {
           start: "top 80%",
         },
       });
-
-      const menuWrapper = menuRef.current;
-      if (!menuWrapper) return;
-
-      const handleMouseMove = (e: MouseEvent) => {
-        gsap.to(".menu-hover-image", {
-          x: e.clientX,
-          y: e.clientY,
-          xPercent: -50,
-          yPercent: -50,
-          stagger: 0.05,
-          duration: 0.6,
-          ease: "power3.out",
-        });
-      };
-
-      menuWrapper.addEventListener("mousemove", handleMouseMove);
-
-      const menuItems = document.querySelectorAll<HTMLDivElement>(".menu-item");
-      menuItems.forEach((item) => {
-        const itemId = item.getAttribute("data-item-id");
-
-        const handleMouseEnter = () => {
-          gsap.to(`[data-image-id="${itemId}"]`, {
-            opacity: 1,
-            scale: 1,
-            duration: 0.4,
-            ease: "power2.out",
-          });
-          gsap.set(`[data-image-id="${itemId}"]`, { zIndex: 1 });
-          gsap.set(item, { zIndex: 2 });
-        };
-
-        const handleMouseLeave = () => {
-          gsap.to(`[data-image-id="${itemId}"]`, {
-            opacity: 0,
-            scale: 0.8,
-            duration: 0.4,
-            ease: "power2.out",
-          });
-          gsap.set(`[data-image-id="${itemId}"]`, { zIndex: -1 });
-          gsap.set(item, { zIndex: 0 });
-        };
-
-        item.addEventListener("mouseenter", handleMouseEnter);
-        item.addEventListener("mouseleave", handleMouseLeave);
-      });
-
-      // Cleanup
-      return () => {
-        menuWrapper.removeEventListener("mousemove", handleMouseMove);
-        menuItems.forEach((item) => {
-          item.removeEventListener("mouseenter", () => {});
-          item.removeEventListener("mouseleave", () => {});
-        });
-      };
     }, menuRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <div
-      ref={menuRef}
-      className="bg-black min-h-screen pt-24 pb-16 relative overflow-hidden"
-    >
-      {/* Floating Images Container */}
-      <div className="fixed inset-0 pointer-events-none z-50">
-        {menuItems.map((item) => (
-          <div
-            key={`image-${item.id}`}
-            data-image-id={item.id}
-            className="menu-hover-image absolute opacity-0 scale-90 origin-center"
-            style={{ top: 0, left: 0 }}
-          >
-            <div className="relative w-[40vh] h-[30vh] rounded-lg overflow-hidden">
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                className="object-cover"
-                sizes="40vh"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-            </div>
-          </div>
-        ))}
-      </div>
-
+    <div ref={menuRef} className="bg-black min-h-screen pb-16">
       {/* Hero Section */}
       <SubHero
         title="Açık Büfe Kahvaltı"
         subtitle="Frühstück und Brunch"
-        imageSrc="https://images.unsplash.com/photo-1600335895229-6e75511892c8?q=80&w=2070&auto=format&fit=crop"
+        imageSrc="/images/fruhstuck.jpg"
         imageAlt="Turkish Breakfast"
         height="medium"
         overlay="dark"
@@ -302,13 +194,12 @@ const Fruhstuck = () => {
               .map((item) => (
                 <div
                   key={item.id}
-                  data-item-id={item.id}
-                  className="menu-item border-b border-white/10 pb-6 relative cursor-pointer"
+                  className="menu-item group border-b border-white/10 pb-6 relative hover:bg-white/5 transition-colors duration-300 rounded-lg p-4"
                 >
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
-                        <h3 className="text-xl text-white font-medium transition-colors duration-300">
+                        <h3 className="text-xl text-white font-medium group-hover:text-[#f4d03f] transition-colors duration-300">
                           {item.id}. {item.name}
                         </h3>
                         {item.tags.length > 0 && (
@@ -343,13 +234,12 @@ const Fruhstuck = () => {
               .map((item) => (
                 <div
                   key={item.id}
-                  data-item-id={item.id}
-                  className="menu-item border-b border-white/10 pb-6 relative cursor-pointer"
+                  className="menu-item group border-b border-white/10 pb-6 relative hover:bg-white/5 transition-colors duration-300 rounded-lg p-4"
                 >
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
-                        <h3 className="text-xl text-white font-medium transition-colors duration-300">
+                        <h3 className="text-xl text-white font-medium group-hover:text-[#f4d03f] transition-colors duration-300">
                           {item.id}. {item.name}
                         </h3>
                         {item.tags.length > 0 && (

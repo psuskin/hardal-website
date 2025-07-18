@@ -1,13 +1,29 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
-interface MinimalButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+type BaseButtonProps = {
   children: React.ReactNode;
   variant?: "light" | "dark";
   size?: "default" | "small";
   withArrow?: boolean;
-}
+  className?: string;
+  href?: string;
+  external?: boolean;
+};
+
+type ButtonAsButton = BaseButtonProps &
+  Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseButtonProps> & {
+    href?: never;
+  };
+
+type ButtonAsLink = BaseButtonProps &
+  Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseButtonProps> & {
+    href: string;
+    external?: boolean;
+  };
+
+type MinimalButtonProps = ButtonAsButton | ButtonAsLink;
 
 const MinimalButton = ({
   children,
@@ -15,31 +31,32 @@ const MinimalButton = ({
   variant = "light",
   size = "default",
   withArrow = true,
+  href,
+  external,
   ...props
 }: MinimalButtonProps) => {
-  return (
-    <button
-      className={cn(
-        "group relative overflow-hidden rounded-full transition-all duration-300",
-        "before:absolute before:inset-0 before:transition-transform before:duration-500",
-        size === "default"
-          ? "px-8 py-4 hover:pr-12"
-          : "px-6 py-2.5 text-sm hover:pr-10",
-        variant === "light"
-          ? "bg-white text-black before:bg-[#f4d03f]"
-          : "bg-[#f4d03f] text-black before:bg-white",
-        "before:translate-x-full before:opacity-0 hover:before:translate-x-0 hover:before:opacity-100",
-        className
-      )}
-      {...props}
-    >
+  const baseStyles = cn(
+    "inline-flex items-center justify-center relative overflow-hidden rounded-full transition-all duration-300",
+    "before:absolute before:inset-0 before:transition-transform before:duration-500 before:ease-out",
+    size === "default"
+      ? "px-8 py-4 hover:pr-12"
+      : "px-6 py-2.5 text-sm hover:pr-10",
+    variant === "light"
+      ? "bg-white text-black before:bg-[#f4d03f]"
+      : "bg-[#f4d03f] text-black before:bg-white",
+    "before:-translate-x-full hover:before:translate-x-0",
+    className
+  );
+
+  const content = (
+    <>
       <span className="relative z-10 font-medium tracking-wide text-sm uppercase">
         {children}
       </span>
       {withArrow && (
         <span
           className={cn(
-            "absolute top-1/2 -translate-y-1/2 opacity-0 transition-all duration-300 group-hover:opacity-100 z-10",
+            "absolute top-1/2 -translate-y-1/2 transition-all duration-300 z-10 opacity-0 group-hover:opacity-100",
             size === "default" ? "right-6" : "right-4"
           )}
         >
@@ -58,6 +75,40 @@ const MinimalButton = ({
           </svg>
         </span>
       )}
+    </>
+  );
+
+  const buttonStyles = cn(baseStyles, "group");
+
+  if (href) {
+    const linkProps = props as React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+    if (external) {
+      return (
+        <a
+          href={href}
+          className={buttonStyles}
+          target="_blank"
+          rel="noopener noreferrer"
+          {...linkProps}
+        >
+          {content}
+        </a>
+      );
+    }
+    return (
+      <Link href={href} className={buttonStyles} {...linkProps}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button
+      className={buttonStyles}
+      {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}
+    >
+      {content}
     </button>
   );
 };

@@ -329,15 +329,8 @@ export default function Testimonials() {
 
             {/* Progress Bar - Simplified */}
             <div className="flex-1 max-w-xs h-14 relative flex items-center">
-              <div className="h-[2px] w-full bg-white/10">
-                <div
-                  className="h-full bg-[#f4d03f] transition-all duration-300"
-                  style={{
-                    width: `${
-                      ((activeIndex + 1) / testimonials.length) * 100
-                    }%`,
-                  }}
-                ></div>
+              <div className="h-[2px] w-full">
+           
               </div>
             </div>
 

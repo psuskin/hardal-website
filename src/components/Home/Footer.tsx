@@ -171,7 +171,7 @@ export default function Footer() {
 
               <div className="grid grid-cols-1 gap-2">
                 <Link
-                  href="/menu"
+                  href="/Hardal_Speisekarte20.03.pdf"
                   className="footer-link group flex items-center justify-between p-3 rounded-lg border border-white/5 bg-white/5 hover:bg-white/10 transition-colors duration-200"
                 >
                   <span className="text-white/80 text-sm group-hover:text-[#fcc81a]">
@@ -203,11 +203,21 @@ export default function Footer() {
                 </a>
 
                 <Link
-                  href="/uber-uns"
+                  href="/impressum"
                   className="footer-link group flex items-center justify-between p-3 rounded-lg border border-white/5 bg-white/5 hover:bg-white/10 transition-colors duration-200"
                 >
                   <span className="text-white/80 text-sm group-hover:text-[#fcc81a]">
-                    Über Uns
+                    Impressum
+                  </span>
+                  <ArrowUpRight size={16} className="text-[#fcc81a]" />
+                </Link>
+
+                <Link
+                  href="/datenschutz"
+                  className="footer-link group flex items-center justify-between p-3 rounded-lg border border-white/5 bg-white/5 hover:bg-white/10 transition-colors duration-200"
+                >
+                  <span className="text-white/80 text-sm group-hover:text-[#fcc81a]">
+                    Datenschutz
                   </span>
                   <ArrowUpRight size={16} className="text-[#fcc81a]" />
                 </Link>

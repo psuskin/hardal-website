@@ -32,7 +32,7 @@ export function AnimatedText({
         const span = document.createElement("span");
         if (char === " ") {
           span.innerHTML = "&nbsp;";
-          span.style.marginRight = "0.25em";
+          span.style.marginRight = "";
         } else {
           span.textContent = char;
         }

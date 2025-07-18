@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,37 +7,24 @@ import { AnimatedText } from "@/components/ui/animated-text";
 import { ImageSlider } from "@/components/ui/image-slider";
 import MinimalButton from "@/components/Buttons/MinimalButton";
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 const heroImages = [
   {
-    src: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0",
+    src: "/images/package1.jpg",
     alt: "Restaurant Innenraum",
   },
   {
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    src: "/images/package2.jpg",
     alt: "Gemütliche Restaurant-Atmosphäre",
   },
   {
-    src: "https://images.unsplash.com/photo-1559339352-11d035aa65de",
+    src: "/images/package3.jpg",
     alt: "Moderner Essbereich",
   },
   {
-    src: "https://images.unsplash.com/photo-1574936145840-28808d77a0b6",
+    src: "/images/package6.jpg",
     alt: "Elegantes Gedeck",
-  },
-];
-
-// Featured dishes for the floating cards
-const featuredDishes = [
-  {
-    name: "Türkisches Frühstück",
-    image: "https://images.unsplash.com/photo-1574936145840-28808d77a0b6",
-  },
-  {
-    name: "Kebab Platte",
-    image: "https://images.unsplash.com/photo-1574936145840-28808d77a0b6",
   },
 ];
 
@@ -266,29 +253,13 @@ export default function Hero() {
 
               {/* CTA Button with creative design */}
               <div className="fade-in">
-                <MinimalButton variant="dark" size="small">
+                <MinimalButton variant="dark" size="small" href="/reservierung">
                   TISCH RESERVIEREN
                 </MinimalButton>
               </div>
 
               {/* Location info with creative styling */}
               <div className="fade-in flex items-center space-x-4 bg-black/30 backdrop-blur-sm p-4 rounded-md border border-white/5 max-w-md">
-                <div className="flex -space-x-3">
-                  {[1, 2].map((i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 lg:w-12 lg:h-12 rounded-full border-2 border-[#fcc81a]/20 overflow-hidden"
-                    >
-                      <Image
-                        src={`https://hardal.de/wp-content/uploads/2019/10/${i}.jpg`}
-                        alt={`Zufriedener Kunde ${i}`}
-                        width={48}
-                        height={48}
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
                 <div>
                   <div className="text-lg lg:text-xl font-medium text-white">
                     Möllner Landstraße 3
@@ -305,41 +276,6 @@ export default function Hero() {
                 <div className="hero-image relative aspect-[4/3] lg:aspect-[16/10] rounded-md overflow-hidden">
                   <ImageSlider images={heroImages} />
                 </div>
-              </div>
-
-              {/* Floating dish cards - Only show on desktop */}
-              <div
-                ref={dishesRef}
-                className="hidden lg:block absolute -right-4 -bottom-8 space-y-4 w-48 z-[2]"
-              >
-                {featuredDishes.map((dish, index) => (
-                  <div
-                    key={index}
-                    className={`floating-dish accent-float bg-black/60 backdrop-blur-md p-2 rounded-md border border-white/10 shadow-xl ${
-                      index === 1 ? "translate-x-8" : ""
-                    }`}
-                    style={{ transitionDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="relative h-20 rounded-sm overflow-hidden mb-2">
-                      <Image
-                        src={dish.image}
-                        alt={dish.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="text-sm font-medium text-white">
-                      {dish.name}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Order online button */}
-              <div className="absolute left-8 bottom-8 hidden lg:block z-[2]">
-                <MinimalButton variant="light" size="small">
-                  JETZT BESTELLEN
-                </MinimalButton>
               </div>
             </div>
           </div>
