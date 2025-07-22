@@ -11,10 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const heroImages = [
   {
-    src: "/images/package1.jpg",
-    alt: "Restaurant Innenraum",
-  },
-  {
     src: "/images/package2.jpg",
     alt: "Gemütliche Restaurant-Atmosphäre",
   },

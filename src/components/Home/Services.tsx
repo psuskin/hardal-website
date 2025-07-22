@@ -17,20 +17,20 @@ gsap.registerPlugin(ScrollTrigger);
 const services = [
   {
     icon: UtensilsCrossed,
-    title: "FRÜHSTÜCK",
+    title: "FRÜHSTÜCK & BRUNCH",
     description:
-      "Traditionelles türkisches Frühstück mit einer Vielfalt an frischen Zutaten und Köstlichkeiten",
+      "Traditionelles türkisches Frühstück & Brunch mit einer Vielfalt an frischen Zutaten und Köstlichkeiten",
     link: "/fruhstuck",
-    image: "/images/DSC00766.jpg",
+    image: "/images/24A09362.jpg",
     number: "01",
   },
   {
     icon: Coffee,
-    title: "BRUNCH",
+    title: "TÜRKISCHE KÜCHE",
     description:
-      "Wochenend-Brunch-Erlebnis mit einer Mischung aus türkischen und internationalen Aromen",
+      "Authentische Küche mit einer Mischung aus türkischen und internationalen Aromen",
     link: "/brunch",
-    image: "/images/DSC00791.jpg",
+    image: "/images/032822_34.jpg",
     number: "02",
   },
   {
@@ -39,7 +39,7 @@ const services = [
     description:
       "Professioneller Catering-Service für Veranstaltungen und besondere Anlässe",
     link: "https://catering.hardal.de/",
-    image: "/images/DSC00773.jpg",
+    image: "/images/img4.png",
     number: "03",
   },
   {
@@ -47,7 +47,7 @@ const services = [
     title: "RESERVIERUNG",
     description: "Buchen Sie Ihren Tisch online für ein perfektes Esserlebnis",
     link: "/reservierung",
-    image: "/images/DSC00771.jpg",
+    image: "/images/032822_49.jpg",
     number: "04",
   },
 ];

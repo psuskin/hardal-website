@@ -267,7 +267,7 @@ const Fruhstuck = () => {
             Reservieren Sie jetzt Ihren Tisch für unser Frühstücksbuffet oder
             Brunch
           </p>
-          <MinimalButton variant="dark" size="small">
+          <MinimalButton variant="dark" size="small" href="/reservierung">
             TISCH RESERVIEREN
           </MinimalButton>
         </div>

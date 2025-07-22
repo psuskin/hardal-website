@@ -112,7 +112,7 @@ export default function AboutUs() {
               </div>
 
               <div className="flex gap-6 items-center">
-                <MinimalButton variant="dark">
+                <MinimalButton variant="dark" href="/Hardal_Speisekarte20.03.pdf">
                   Speisekarte Entdecken
                 </MinimalButton>
                 <div className="h-[2px] w-12 bg-gray-700"></div>
@@ -153,7 +153,7 @@ export default function AboutUs() {
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl transform transition-transform duration-700 hover:scale-105 hover:-translate-y-2">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
                   <Image
-                    src="https://hardal.de/wp-content/uploads/2019/10/2.jpg"
+                    src="/images/24A09535.jpg"
                     alt="Gemütliche Restaurant-Atmosphäre"
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
@@ -198,7 +198,7 @@ export default function AboutUs() {
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl transform transition-transform duration-700 hover:scale-105 hover:-translate-y-2">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
                   <Image
-                    src="https://hardal.de/wp-content/uploads/2019/10/1.jpg"
+                    src="/images/24A06624.jpg"
                     alt="Moderne Einrichtung"
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"

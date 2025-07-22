@@ -13,42 +13,42 @@ gsap.registerPlugin(ScrollTrigger);
 const testimonials = [
   {
     id: 1,
-    name: "Sophia Müller",
-    role: "Food-Enthusiastin",
+    name: "nie netty",
+    role: "Local Guide",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974",
     quote:
-      "Hardal bringt die authentischen Aromen der Türkei nach Hamburg. Ihr Frühstücksangebot ist eine kulinarische Reise, auf die ich mich jedes Wochenende freue.",
+      "Ich war total begeistert vom Hardal! Das Essen war frisch, super gewürzt und wirklich authentisch türkisch. Besonders der Grillteller und die Vorspeisen haben fantastisch geschmeckt. Der Service war sehr freundlich und aufmerksam, obwohl das Restaurant gut besucht war. Die Atmosphäre ist gemütlich und modern, man fühlt sich sofort wohl. Auch die kleinen Aufmerksamkeiten wie Tee nach dem Essen sind ein schönes Extra. Preis-Leistung ist top – ich komme definitiv wieder!",
     rating: 5,
   },
   {
     id: 2,
-    name: "Jan Becker",
-    role: "Anwohner",
+    name: "M. A.",
+    role: "Local Guide",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974",
     quote:
-      "Die Atmosphäre, der Service und vor allem das Essen bei Hardal sind außergewöhnlich. Ihre Mezze-Platte ist die beste, die ich außerhalb Istanbuls gegessen habe.",
+      "Wir haben hier gebruncht und es war wunderbar! Sehr ansprechend, riesige Auswahl, sehr gut auch für Vegetarier! Der Service freundlich und das Ambiente ansprechend und gepflegt! Vielen Dank und gerne wieder!",
     rating: 5,
   },
   {
     id: 3,
-    name: "Emma Weber",
-    role: "Food-Bloggerin",
+    name: "A H",
+    role: "Local Guide",
     image:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961",
     quote:
-      "Als jemand, der beruflich über Essen schreibt, kann ich mit Überzeugung sagen, dass Hardal eines der authentischsten türkischen Esserlebnisse in der Stadt bietet.",
+      "Was für ein toller Laden! Mein Freund war anfangs noch skeptisch - ließ sich aber dennoch überreden. Und überzeugen! Der Service war super freundlich, dass Essen wirklich lecker und wir haben uns dort sehr wohl gefühlt. Gerne wieder!",
     rating: 5,
   },
   {
     id: 4,
-    name: "Thomas Schulz",
-    role: "Geschäftsführer",
+    name: "Sani",
+    role: "Local Guide",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974",
     quote:
-      "Hardal ist unser Stammlokal für Geschäftsessen geworden. Der Catering-Service ist tadellos und das Essen beeindruckt unsere Kunden immer wieder aufs Neue.",
+      "Herzens Empfehlung!! Der beste Brunch bzw Buffet wo ich jemals war. Eine riesige Auswahl was einem schwer macht alles zu essen. Das Personal ist soo super nett und lieb. Das Restaurant selbst sehr stylisch und gemütlich. Das Essen ist der Wahnsinn! Soo viel Auswahl. Es wird immer wieder frisches nach gelegt. Kaffee, Tee und Säfte sind inkl. Sehr zu empfehlen",
     rating: 5,
   },
 ];
@@ -228,83 +228,49 @@ export default function Testimonials() {
                   key={testimonial.id}
                   className={`absolute inset-0 transition-all duration-700 ease-out ${position} ${scale} ${opacity} ${zIndex} ${willChange} transform-style-3d`}
                 >
-                  {/* Modern Card Design */}
-                  <div className="bg-neutral-900/70 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/5 shadow-xl shadow-black/30 h-full flex flex-col lg:flex-row">
-                    {/* Left Side - Image */}
-                    <div className="lg:w-2/5 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent z-10"></div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
-
-                      {/* Testimonial Image */}
-                      <div className="h-full relative">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 1024px) 100vw, 40vw"
-                          priority={isActive || isPrev || isNext}
-                          loading={
-                            isActive || isPrev || isNext ? "eager" : "lazy"
-                          }
-                        />
-                      </div>
-
-                      {/* Floating Quote Icon */}
-                      <div className="absolute top-6 left-6 z-20">
+                  {/* Modern Card Design - Clean Layout */}
+                  <div className="bg-neutral-900/70 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/5 shadow-xl shadow-black/30 h-full flex flex-col justify-center">
+                    {/* Content Only */}
+                    <div className="p-8 lg:p-12 flex flex-col justify-center text-center">
+                      {/* Quote Icon */}
+                      <div className="flex justify-center mb-6">
                         <div className="bg-[#f4d03f]/20 backdrop-blur-sm p-3 rounded-full">
                           <Quote size={24} className="text-[#f4d03f]" />
                         </div>
                       </div>
 
-                      {/* Rating */}
-                      <div className="absolute bottom-6 left-6 z-20">
-                        <div className="flex items-center gap-1">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <svg
-                              key={i}
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="#f4d03f"
-                              stroke="none"
-                            >
-                              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Right Side - Content */}
-                    <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
+                      {/* Quote */}
                       <div className="mb-8">
                         <p className="text-white/90 text-lg lg:text-2xl leading-relaxed font-light italic">
                           &ldquo;{testimonial.quote}&rdquo;
                         </p>
                       </div>
 
-                      <div className="mt-auto">
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#f4d03f]/30 lg:hidden">
-                            <Image
-                              src={testimonial.image}
-                              alt={testimonial.name}
-                              width={48}
-                              height={48}
-                              className="object-cover"
-                            />
-                          </div>
-                          <div>
-                            <h4 className="text-[#f4d03f] text-xl font-medium">
-                              {testimonial.name}
-                            </h4>
-                            <p className="text-white/60 text-sm">
-                              {testimonial.role}
-                            </p>
-                          </div>
-                        </div>
+                      {/* Rating */}
+                      <div className="flex justify-center items-center gap-1 mb-6">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <svg
+                            key={i}
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="#f4d03f"
+                            stroke="none"
+                          >
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                          </svg>
+                        ))}
+                      </div>
+
+                      {/* Author Info */}
+                      <div>
+                        <h4 className="text-[#f4d03f] text-xl font-medium">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-white/60 text-sm">
+                          {testimonial.role}
+                        </p>
                       </div>
                     </div>
                   </div>

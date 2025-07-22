@@ -12,22 +12,22 @@ gsap.registerPlugin(ScrollTrigger);
 // Featured menu items
 const featuredItems = [
   {
-    name: "From the Charcoal Grill",
+    name: "Fleischgerichte",
     description: "Traditionelle türkische gegrillte Fleischsorten",
-    titleTR: "Kebaplar",
-    image: "/images/package1.jpg",
+    titleTR: "Karışık Izgaralar",
+    image: "/images/24A09071.jpg",
   },
   {
-    name: "Mixed Grill Platter",
-    description: "Gemischte Grillplatte für gemeinsam genießen",
-    titleTR: "Karışık Izgaralar",
-    image: "/images/package2.jpg",
+    name: "Teigwaren",
+    description: "Teigwaren mit frischen Zutaten und traditionellen Rezepten",
+    titleTR: "Makarna",
+    image: "/images/032822_20.jpg",
   },
   {
     name: "Frühstück & Brunch",
     description: "Mit Tomaten, Gurken, Oliven, Weißkäse und Lavas-Brot",
     titleTR: "Frühstück & Brunch",
-    image: "/images/package3.jpg",
+    image: "/images/24A06660 (1).jpg",
   },
 ];
 
@@ -167,7 +167,7 @@ export default function HomeMenu() {
                   {/* Main Image */}
                   <div className="absolute inset-0">
                     <Image
-                      src="/images/DSC00826.jpg"
+                      src="/images/SNY07168.jpg"
                       alt="Turkish cuisine"
                       fill
                       className="object-cover"
