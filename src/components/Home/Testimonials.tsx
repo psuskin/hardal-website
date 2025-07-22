@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
+// import Image from "next/image";
 import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 
 // Register GSAP plugins
