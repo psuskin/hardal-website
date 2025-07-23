@@ -116,7 +116,7 @@ export const navLinks: NavLinkType[] = [
         external: true
     },
     { href: "/reservierung", label: "RESERVIERUNG" },
-    { href: "/fruhstuck", label: "FRÜHSTÜCK" },
+    // { href: "/fruhstuck", label: "FRÜHSTÜCK" },
     {
         label: "MENU",
         sections: menuToNavSections(fullMenuData)

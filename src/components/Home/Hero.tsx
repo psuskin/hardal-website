@@ -208,18 +208,18 @@ export default function Hero() {
               <div className="-space-y-3">
                 <AnimatedText
                   text="Traditionelle Türkische"
-                  className="font-light text-3xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight"
+                  className="font-light text-xl sm:text-2xl md:text-3xl xl:text-4xl leading-tight"
                   delay={0.1}
                 />
                 <AnimatedText
                   text="Küche im"
-                  className="font-light text-3xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight"
+                  className="font-light text-xl sm:text-2xl md:text-3xl xl:text-4xl leading-tight"
                   color="#fcc81a"
                   delay={0.2}
                 />
                 <AnimatedText
                   text="Herzen Hamburgs"
-                  className="font-light text-3xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight"
+                  className="font-light text-xl sm:text-2xl md:text-3xl xl:text-4xl leading-tight"
                   delay={0.3}
                 />
               </div>
