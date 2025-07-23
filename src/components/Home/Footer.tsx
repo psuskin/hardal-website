@@ -6,9 +6,9 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
-  Instagram,
+  // Instagram,
   Facebook,
-  Twitter,
+  // Twitter,
   MapPin,
   Phone,
   Mail,
@@ -236,7 +236,7 @@ export default function Footer() {
 
             {/* Social Media */}
             <div className="flex items-center gap-3">
-              <a
+              {/* <a
                 href="https://instagram.com/hardal"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -246,7 +246,7 @@ export default function Footer() {
                   size={16}
                   className="text-white/60 group-hover:text-[#fcc81a]"
                 />
-              </a>
+              </a> */}
 
               <a
                 href="https://facebook.com/hardal"
@@ -260,7 +260,7 @@ export default function Footer() {
                 />
               </a>
 
-              <a
+              {/* <a
                 href="https://twitter.com/hardal"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -270,7 +270,7 @@ export default function Footer() {
                   size={16}
                   className="text-white/60 group-hover:text-[#fcc81a]"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

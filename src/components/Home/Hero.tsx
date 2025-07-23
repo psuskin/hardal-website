@@ -4,25 +4,9 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { AnimatedText } from "@/components/ui/animated-text";
-import { ImageSlider } from "@/components/ui/image-slider";
 import MinimalButton from "@/components/Buttons/MinimalButton";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const heroImages = [
-  {
-    src: "/images/package2.jpg",
-    alt: "Gemütliche Restaurant-Atmosphäre",
-  },
-  {
-    src: "/images/package3.jpg",
-    alt: "Moderner Essbereich",
-  },
-  {
-    src: "/images/package6.jpg",
-    alt: "Elegantes Gedeck",
-  },
-];
 
 export default function Hero() {
   const heroRef = useRef(null);
@@ -270,7 +254,16 @@ export default function Hero() {
               {/* Main hero image */}
               <div ref={imageRef} className="will-change-transform relative">
                 <div className="hero-image relative aspect-[4/3] lg:aspect-[16/10] rounded-md overflow-hidden">
-                  <ImageSlider images={heroImages} />
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  >
+                    <source src="/images/Webseite Vid.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </div>

@@ -91,9 +91,7 @@ export default function Home() {
           logo="https://hardal.de/logo-dark.png"
           description="Authentische türkische Küche im Herzen von Hamburg."
           sameAs={[
-            "https://facebook.com/hardalrestaurant",
-            "https://instagram.com/hardal_restaurant",
-            "https://twitter.com/hardalrestaurant",
+            "https://facebook.com/hardalrestaurant"
           ]}
         />
 
